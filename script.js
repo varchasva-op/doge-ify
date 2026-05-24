@@ -56,10 +56,10 @@ window.onload = function() {
     playBtn.addEventListener('click', function() {
         if (audioelement.paused || audioelement.currentTime <= 0) {
             audioelement.play();
-            if (playIcon) playIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
+            if (playIcon) playIcon.innerText = "▶"; // Play ka symbol
         } else {
             audioelement.pause();
-            if (playIcon) playIcon.innerHTML = `<path d="M8 5v14l11-7z"/>`;
+            if (playIcon) playIcon.innerText = "⏸"; // Pause ka symbol
         }
     });
 
