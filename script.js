@@ -1,8 +1,8 @@
 // ─── COMPLETE BULLET-PROOF SCRIPT ───
 
 let songs = [
-    { songName: "Choo Lo (Khada Hu Aaj Bhi)", filePath: "./khada.mp3", coverPath: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400" },
-    { songName: "Kalank Title Track", filePath: "./kalank.mp3", coverPath: "https://c.saavncdn.com/784/Kalank-Hindi-2019-20200508163312-500x500.jpg" },
+    { songName: "Choo Lo (Khada Hu Aaj Bhi)", filePath: "https://soundcloud.com/soundhelix", coverPath: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400" },
+    { songName: "Kalank Title Track", filePath: "https://soundcloud.com/soundhelix", coverPath: "https://c.saavncdn.com/784/Kalank-Hindi-2019-20200508163312-500x500.jpg" },
     { songName: "Badtameez Dil", filePath: "./dil.mp3", coverPath: "https://i.ytimg.com/vi/II2EO3Nw4m0/maxresdefault.jpg" },
     { songName: "Kajra Re", filePath: "./kajra.mp3", coverPath: "https://i.ytimg.com/vi/4dsFQFCvVGU/maxresdefault.jpg" },
     { songName: "Dhoom Machale", filePath: "./dhoom.mp3", coverPath: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=400" },
