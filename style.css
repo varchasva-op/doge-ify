@@ -1,0 +1,347 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #EDD60E;
+    background-image: url('https://i.redd.it/cheems-lofi-wallpaper-version-desktop-mobile-and-tablet-v0-idv9j6w5syh91.png?width=2560&format=png&auto=webp&s=7de3093fa18ec4d149b0b515963f035d2e57b9ce');
+    
+    /* 2. Image ko screen ke hisab se stretch aur center karne ke liye */
+    background-size: cover;          /* Isse image poori screen par barabar fit ho jayegi */
+    background-position: center;     /* Image ka center hissa screen ke beech mein rahega */
+    background-repeat: no-repeat;    /* Agar screen badi ho toh image repeat (duplicate) nahi hogi */
+    background-attachment: fixed;    /* Isse scroll karne par bhi background apni jagah lock rahega (Premium look) */
+    
+    /* 3. Page ki height poori screen ke barabar karne ke liye */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0
+}
+
+/* Navbar ka background color badalne ke liye */
+.navbar.bg-body-tertiary {
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+    
+    /* 2. Ek smooth blur effect jo peeche ke wallpaper ko glass jaisa dikhayega */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari browser ke liye */
+
+    /* 3. Navbar ka size chota karne ke liye top aur bottom padding kam kar di */
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+
+    /* Jo margin aapne pehle lagayi thi */
+    margin-top: 15px !important;
+}
+
+/* Sirf navbar ke andar ke text (DOGE-IFY) ka font badalne ke liye */
+/* Navbar ke text (DOGE-IFY) ko style karne ke liye */
+/* Purane code ko isse replace kar lo */
+/* Purana brand text wala code waisa hi rahega */
+.navbar.bg-body-tertiary .navbar-brand {
+    font-family: "Cinzel", serif;
+    font-size: 26px;          
+    font-weight: 700;          
+    color: #ffffff !important; 
+    margin-left: 15px;         
+    letter-spacing: 2px;       
+    display: inline-flex;       
+    align-items: center;       
+    line-height: 1;            
+}
+
+/* ─── NAYE LINKS KE LIYE CSS (HOME, ABOUT, OP) ─── */
+.my-custom-links-wrapper .nav-link {
+    font-family: "Cinzel", serif;
+    font-size: 20px;            
+    font-weight: 500;            
+    color: rgba(255, 255, 255, 0.7) !important; 
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block; /* Isse link poori width nahi gherenge, bas apne text jitne rahenge */
+    width: auto;           /* Kisi bhi haal mein right side bhagne se rokne ke liye */
+    transition: color 0.3s ease; 
+    margin-left: 15px !important;  /* Har word ke left mein 15px ka gap */
+    margin-right: 15px !important;
+}
+
+/* Jab koi un links par mouse le jaye (Hover kare) */
+.navbar.bg-body-tertiary .nav-link:hover {
+    color: #ffffff !important;   /* Hover karne par ekdum pure white ho jayenge */
+}
+/* Navbar ke andar ki logo image ko oval banane ke liye */
+.navbar.bg-body-tertiary .navbar-brand img {
+    border-radius: 50%; /* Isse corners rounded hokar oval ban jayenge */
+    object-fit: cover;  /* Agar image stretch ho rahi ho to use theek karne ke liye */
+}
+/* ─── PLAYER CONTAINER STYLING ─── */
+/* Purane .player-container ko isse replace kar lo */
+.player-container {
+    background-color: rgba(0, 0, 0, 0.45) !important; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px; /* Corners ko thoda kam round kiya sleek look ke liye */
+    
+    /* VERTICALLY PATLA: Top-bottom padding ko 12px se hata kar 8px kar diya */
+    /* HORIZONTALLY LAMBA: Left-right padding ko 25px se badha kar 40px kiya */
+    padding: 8px 40px; 
+    
+    position: fixed;
+    bottom: 15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* HORIZONTALLY LAMBA: Width aur Max-width dono ko badha diya */
+    width: 95%;        
+    max-width: 750px;   /* Pehle 550px tha, ab lamba kar diya */
+    
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+/* Time Stamps (0:00 / 3:45) */
+.time-stamp {
+    font-family: "Cinzel", serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+/* ─── CUSTOM SLIDER (RANGE) ─── */
+.custom-slider {
+    accent-color: #ff9900; /* Doge jaisa accent color thumb ke liye */
+    cursor: pointer;
+}
+
+/* ─── CONTROL BUTTONS STYLING ─── */
+.control-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    color: #ff9900; /* Hover karne par doge orange color chamkega */
+    transform: scale(1.1); /* Halka sa zoom effect */
+}
+.player-container .row {
+    margin-bottom: 2px !important; /* Spacing ekdum minimal kar di */
+}
+
+/* Play button ko capsule (horizontally wide) look dene ke liye update */
+.play-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* 50% border-radius hata kar rounded-pill type lock diya */
+    border-radius: 30px !important; 
+    
+    /* Vertically patla aur Horizontally lamba */
+    padding: 6px 25px !important; 
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn:hover {
+    background-color: #ffe100;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+    transform: scale(1.05); /* Halka aesthetic scale down zoom */
+}
+/* ─── MAIN DASHBOARD POSITIONING ─── */
+/* ─── MAIN DASHBOARD HEIGHT LOCK ─── */
+.music-dashboard {
+    /* Navbar aur bottom player ke beech ki bachi hui height mein fit karne ke liye */
+    margin-top: 15px;
+    margin-bottom: 0;
+    /* Height ko lock kar diya taaki page scroll na ho */
+    height: calc(100vh - 210px); 
+    overflow: hidden;
+}
+
+.music-dashboard > .row {
+    height: 100%;
+}
+
+.glass-card {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 20px !important; 
+    height: 100% !important; 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+/* ─── NOW PLAYING BOX & IMAGE (Big Size) ─── */
+.now-playing-section {
+    width: 100%; /* Pure card ki width le */
+    text-align: center;
+}
+
+/* ─── NOW PLAYING IMAGE FIXED ZONE ─── */
+.album-art-wrapper {
+    width: 280px;         /* Fixed width */
+    height: 280px;        /* Fixed height (Square aspect ratio) */
+    margin: 0 auto;       /* Card ke center mein rakhne ke liye */
+    overflow: hidden;     /* Agar photo isse badi ho toh baahar na nikle */
+    border-radius: 15px;  /* Jaisa tumhare card ka border round hai */
+}
+
+.album-art-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 👈 YEH HAI ASLI HERO: Photo ko stretch nahi hone dega, balki perfectly crop karke fit karega */
+}
+
+.current-song-title {
+    font-family: "Cinzel", serif;
+    color: #ffffff;
+    font-size: 24px; /* Title bhi thoda bada kiya balance ke liye */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.current-song-artist {
+    color: #ff9900; /* Doge orange color head ke liye */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-family: "Cinzel", serif;
+    font-size: 15px; /* Font thoda chota kiya */
+    font-weight: 700;
+    color: #ff9900; 
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 6px;
+}
+
+/* ─── PLAYLIST LIST SCROLLABLE ZONE ─── */
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Items ke beech ki gap kam ki */
+    overflow-y: auto; /* Agar songs zyada hon toh bas is box ke andar scroll hoga, puri website par nahi */
+    flex-grow: 1;
+}
+
+/* Playlist ka scrollbar chupaane ya sleek banane ke liye */
+.song-list::-webkit-scrollbar {
+    width: 3px;
+}
+.song-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 153, 0, 0.2);
+    border-radius: 2px;
+}
+
+.song-item {
+    padding: 8px 12px; /* Sleek padding */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+}
+
+/* ─── NOW PLAYING BOX & IMAGE SHRINK ─── */
+.album-art-wrapper {
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px; /* Padding kam ki */
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+
+
+
+/* ─── LYRICS ZONE COMPACT ─── */
+.lyrics-container {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-height: 105px; /* Lyrics box ki height ko tight kiya */
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex-grow: 1;
+}
+
+.lyrics-line {
+    font-size: 12px; /* Lines thodi choti ki */
+    margin-bottom: 6px;
+}
+
+.lyrics-line.active {
+    font-size: 13px;
+}
+
+/* ─── BOTTOM PLAYER SPACE ADJUSTMENT ─── */
+.player-container {
+    /* Bottom margin aur heights lock hone ki wajah se iski positioning ko thoda safe side rakh rahe hain */
+    position: fixed;
+    bottom: 15px; /* Thoda aur neeche khiska diya edge ke paas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 550px;
+    padding: 12px 25px; /* Thoda sleek kiya */
+}
+/* ─── UPCOMING TRACKS LIST STYLING ─── */
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Items ke beech ka gap aur kam kiya taaki scroll na aaye */
+    overflow: hidden; /* Scrollbar ko ekdum hide karne ke liye */
+}
+
+.song-item {
+    /* Padding ko 8px 12px se thoda aur compact kiya (6px 12px) */
+    padding: 6px 12px; 
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+}
+
+.song-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Track numbers (01, 02, etc.) */
+.track-number {
+    font-family: "Cinzel", serif;
+    color: rgba(255, 255, 255, 0.6) !important; /* Thoda sa bright white tone */
+    font-size: 13px;
+}
+
+/* MAIN GAANO KE TITLES */
+.song-title {
+    color: #ffffff !important; /* Ekdum pure white font */
+    font-size: 14px; /* Size halka sa adjust kiya fit karne ke liye */
+    font-weight: 500;
+}
+
+/* ARTISTS KE NAAM */
+.song-artist {
+    color: rgba(255, 255, 255, 0.8) !important; /* Pehle translucent tha, ab clear white touch diya */
+    font-size: 11px;
+}
+
+/* TIMING BAR (Right side durations) */
+.track-duration {
+    color: #ffffff !important; /* Pure white font */
+    font-size: 12px;
+}
